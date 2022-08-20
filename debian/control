@@ -1,0 +1,18 @@
+Source: amarokwelcome
+Section: admin
+Priority: optional
+Maintainer: Amarok Linux <packages@amaroklinux.org>
+Build-Depends: debhelper (>= 9)
+Standards-Version: 4.5.1
+
+Package: amarokwelcome
+Architecture: all
+Depends: python3 (>= 3.3),
+         python3-gi,
+         python3-xapp (>= 2.0.1),
+         amarok-translations,
+         amarok-common,
+         amarok-info,
+         ${misc:Depends},
+Description: Welcome screen for Amarok Linux
+ Shows important information about the release/edition of Amarok Linux.

@@ -1,0 +1,37 @@
+#!/usr/bin/python3
+
+DOMAIN = "amarokwelcome"
+PATH = "/usr/share/amarok/locale"
+
+import os
+import gettext
+from amarokcommon import additionalfiles
+
+os.environ['LANGUAGE'] = "en_US.UTF-8"
+gettext.install(DOMAIN, PATH)
+
+prefix = """[Desktop Entry]
+Exec=amarokwelcome
+Icon=amarokwelcome
+Terminal=false
+Type=Application
+Encoding=UTF-8
+Categories=GNOME;GTK;Settings;DesktopSettings;
+NotShowIn=KDE;
+StartupNotify=false
+"""
+
+additionalfiles.generate(DOMAIN, PATH, "usr/share/applications/amarokwelcome.desktop", prefix, _("Welcome Screen"), _("Introduction to Amarok Linux"), "")
+
+prefix = """[Desktop Entry]
+Exec=amarokwelcome
+Icon=amarokwelcome
+Terminal=false
+Type=Application
+Encoding=UTF-8
+OnlyShowIn=KDE;
+Categories=System;
+StartupNotify=false
+"""
+
+additionalfiles.generate(DOMAIN, PATH, "usr/share/applications/kde4/amarokwelcome.desktop", prefix, _("Welcome Screen"), _("Introduction to Amarok Linux"), "", genericName=_("Welcome Screen"))

@@ -1,0 +1,10 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=amarokwelcome
+Comment=Amarok Linux Welcome Screen
+Icon=amarokwelcome
+Exec=amarokwelcome-launcher
+Terminal=false
+Type=Application
+Categories=
+

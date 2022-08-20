@@ -1,0 +1,5 @@
+#!/bin/bash
+
+intltool-extract --type=gettext/glade usr/share/amarok/amarokwelcome/amarokwelcome.ui
+xgettext --language=Python --keyword=_ --keyword=N_ --output=amarokwelcome.pot usr/lib/amarok/amarokwelcome/amarokwelcome.py generate_desktop_files usr/share/amarok/amarokwelcome/amarokwelcome.ui.h
+rm -f usr/share/amarok/amarokwelcome/amarokwelcome.ui.h
